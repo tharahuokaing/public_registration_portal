@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>T-Coin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to T-Coin Dashboard</h2>
+    <p id="welcomeMessage">Hello, user! You are now logged in.</p>
+
+    <div class="dashboard-actions">
+      <button onclick="viewProfile()">View Profile</button>
+      <button onclick="viewWallet()">View Wallet</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    // Example: Replace with actual username from backend or login.js
+    const username = localStorage.getItem('username') || "User";
+    document.getElementById('welcomeMessage').textContent = "Hello, " + username + "! You are now logged in.";
+
+    function viewProfile() {
+      alert("Profile page coming soon!");
+    }
+
+    function viewWallet() {
+      alert("Wallet details coming soon!");
+    }
+
+    function logout() {
+      alert("You have been logged out.");
+      localStorage.removeItem('username');
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
