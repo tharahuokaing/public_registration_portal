@@ -13,8 +13,12 @@ form.addEventListener('submit', async function(event) {
     return;
   }
 
-  // Example: send data to backend API
-  alert("Registration successful for " + username + "!");
-  errorMessage.textContent = "";
-  form.reset();
+  try {
+    // Example: send data to backend API
+    alert("Registration successful for " + username + "!");
+    errorMessage.textContent = "";
+    form.reset();
+  } catch (err) {
+    errorMessage.textContent = "Error: " + err.message;
+  }
 });
