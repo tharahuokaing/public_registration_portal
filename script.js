@@ -1,7 +1,7 @@
 const form = document.getElementById('registrationForm');
 const errorMessage = document.getElementById('errorMessage');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', async function(event) {
   event.preventDefault();
   const username = document.getElementById('username').value.trim();
   const email = document.getElementById('email').value.trim();
@@ -13,7 +13,7 @@ form.addEventListener('submit', function(event) {
     return;
   }
 
-  // Example: send data to server (replace with your backend API)
+  // Example: send data to backend API
   alert("Registration successful for " + username + "!");
   errorMessage.textContent = "";
   form.reset();
