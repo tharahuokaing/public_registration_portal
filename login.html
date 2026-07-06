@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>T-Coin Login Portal</title>
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="tcoin.png" type="image/png" />
 </head>
 <body>
   <div class="container">
     <h2>T-Coin Login</h2>
-    <form id="loginForm">
+    <form id="loginForm" novalidate>
       <input type="email" id="loginEmail" placeholder="Email" required>
       <input type="password" id="loginPassword" placeholder="Password" required>
       <div id="loginError" class="error"></div>
       <button type="submit">Login</button>
     </form>
+    <p class="switch-page">
+      Don’t have an account? <a href="index.html">Register here</a>
+    </p>
   </div>
   <script src="login.js"></script>
 </body>
